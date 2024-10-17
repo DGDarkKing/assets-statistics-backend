@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "monolit-statistic"
+version = "0.1.0"
+description = ""
+authors = ["Danila Deryavko <deryavkodan@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^2.32.3"
+uvicorn = "^0.30.6"
+fastapi = "^0.115.0"
+pydantic = "^2.9.2"
+pydantic-settings = "^2.5.2"
+pybit = "^5.8.0"
+asyncpg = "^0.29.0"
+alembic = "^1.13.2"
+sqlalchemy = "^2.0.35"
+minio = "^7.2.8"
+openpyxl = "^3.1.5"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+flake8 = "^7.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
