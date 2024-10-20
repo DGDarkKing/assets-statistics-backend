@@ -19,7 +19,7 @@ jobs:
       - name: Install Poetry
         uses: snok/install-poetry@v1
       - name: Install dependencies
-        run: poetry install --with test
+        run: poetry install --with dev
       - name: Show ls
         run: ls -l
       - name: Configure PYTHONPATH
