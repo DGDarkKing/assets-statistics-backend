@@ -23,6 +23,5 @@ jobs:
       - name: Configure PYTHONPATH
         run: export PYTHONPATH="${PYTHONPATH}:/src"
       - name: Run tests
-        shell: bash -l {0}
-        run: pytest tests/
+        run: python3 -m pytest tests/
 
