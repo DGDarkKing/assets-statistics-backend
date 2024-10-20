@@ -20,12 +20,8 @@ jobs:
         uses: snok/install-poetry@v1
       - name: Install dependencies
         run: poetry install --with dev --no-root
-      - name: Before configuration
-        run: echo $PYTHONPATH
       - name: Configure PYTHONPATH
-        run: export PYTHONPATH="${PYTHONPATH}:/src"
-      - name: After configuration
-        run: echo $PYTHONPATH
+        run: echo "PYTHONPATH=/src" >> $GITHUB_ENV
       - name: Run tests
         run: poetry run pytest tests/
 
