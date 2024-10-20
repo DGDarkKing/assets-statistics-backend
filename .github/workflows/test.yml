@@ -23,5 +23,5 @@ jobs:
       - name: Configure PYTHONPATH
         run: export PYTHONPATH="${PYTHONPATH}:/src"
       - name: Run tests
-        run: python3 -m pytest tests/
+        run: poetry run pytest tests/
 
