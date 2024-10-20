@@ -5,6 +5,9 @@ description = ""
 authors = ["Danila Deryavko <deryavkodan@gmail.com>"]
 readme = "README.md"
 
+[tool.pytest.ini_options]
+pythonpath = 'src'
+
 [tool.poetry.dependencies]
 python = "^3.12"
 requests = "^2.32.3"

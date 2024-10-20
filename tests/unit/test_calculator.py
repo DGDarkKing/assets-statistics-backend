@@ -6,7 +6,7 @@ from schemas.transaction import TransactionOfStatistics, Direction
 from services.statistic_calculator import StatisticFifoCalculator
 
 
-class StatisticCalculatorTest:
+class TestStatisticCalculator:
     def test_average_buy_empty(self):
         with pytest.raises(ValueError, match=r'.*[Tt]here are thre not buy.orders*'):
             StatisticFifoCalculator().calc_average_buy(buy_orders=[])

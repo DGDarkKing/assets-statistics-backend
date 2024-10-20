@@ -23,5 +23,5 @@ jobs:
       - name: Configure PYTHONPATH
         run: echo "PYTHONPATH=$PWD/src" >> $GITHUB_ENV
       - name: Run unit tests
-        run: poetry run pytest
+        run: poetry run pytest tests/unit
 
