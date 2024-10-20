@@ -8,7 +8,7 @@ from services.statistic_calculator import StatisticFifoCalculator
 
 class TestStatisticCalculator:
     def test_average_buy_empty(self):
-        with pytest.raises(ValueError, match=r'.*[Tt]here are thre not buy.orders*'):
+        with pytest.raises(ValueError, match=r'.*[Tt]here are not buy.orders*'):
             StatisticFifoCalculator().calc_average_buy(buy_orders=[])
 
     def test_average_buy_error_average_all_negative(self):
@@ -137,7 +137,7 @@ class TestStatisticCalculator:
         assert actual_res == expected_res
 
     def test_calc_empty(self):
-        with pytest.raises(ValueError, match=r'.*[Tt]here are thre not buy.orders*'):
+        with pytest.raises(ValueError, match=r'.*[Tt]here are not buy.orders*'):
             StatisticFifoCalculator().calc([], [])
 
     def test_calc_empty_buy(self):
