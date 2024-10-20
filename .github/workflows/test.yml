@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: poetry install --with dev --no-root
       - name: Configure PYTHONPATH
-        run: export PYTHONPATH="${PYTHONPATH}:/src"
+        run: echo $PYTHONPATH && export PYTHONPATH="${PYTHONPATH}:/src" && echo $PYTHONPATH
       - name: Run tests
         run: poetry run pytest tests/
 
