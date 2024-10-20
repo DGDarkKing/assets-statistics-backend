@@ -20,10 +20,9 @@ jobs:
         uses: snok/install-poetry@v1
       - name: Install dependencies
         run: poetry install --with dev
-      - name: Show ls
-        run: ls -l
       - name: Configure PYTHONPATH
         run: export PYTHONPATH="${PYTHONPATH}:/src"
       - name: Run tests
+        shell: bash -l
         run: pytest tests/
 
